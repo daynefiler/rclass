@@ -1,39 +1,15 @@
 ---
-title: 'R Small Group: Class 2'
-author: "Amy Allen & Dayne Filer"
-date: "June 21, 2016"
-output:
-  pdf_document:
-    highlight: tango
-  html_document: null
+title: "HTLTC-R: Data structures & subsetting"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{HTLTC-R: Data structures & subsetting}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, collapse = TRUE)
 ```
-
-<!-- Here we style out button a little bit -->
-<style>
-  .showopt {
-    background-color: #004c93;
-    color: #FFFFFF; 
-    width: 100px;
-    height: 20px;
-    text-align: center;
-    vertical-align: middle !important;
-    border-radius: 8px;
-    float:right;
-    }
-
-    .showopt:hover {
-    background-color: #dfe4f2;
-    color: #004c93;
-  }
-
-</style>
-
-<!--Include script for hiding output chunks-->
-<script src="hideOutput.js"></script>
 
 ### Using this document
 
@@ -43,10 +19,9 @@ knitr::opts_chunk$set(echo = TRUE, collapse = TRUE)
 * While you can copy and paste code into R, you will learn faster if you type out the commands yourself. 
 * Read through the document after class. This is meant to be a reference, and ideally, you should be able to understand every line of code. If there is something you do not understand please email us with questions or ask in the following class (you're probably not the only one with the same question!). 
 
-### Class 2 expectations
-1. Review vectors from the previous class
-2. Understand the basic R data structures (vector, matrix, list, data.frame)
-3. Know how to subset the four basic data structures
+### Goals
+1. Understand the basic R data structures (vector, matrix, list, data.frame)
+2. Know how to subset the four basic data structures
 
 ### Introduction to data structures 
 
@@ -82,6 +57,7 @@ As you can see this gives us a matrix of all numbers from 1 to 6 with two rows a
 ```{r}
 matrix(data = 1:6, nrow = 2, ncol = 3, byrow = TRUE)
 ```
+
 Matrices do not have to be numeric -- any vector can be transformed into a matrix. For example:
 
 ```{r}
@@ -100,7 +76,7 @@ colnames(mat1) <- c("Col 1", "Col 2", "Col 3")
 mat1
 ```
 
-It is important to note that similarly to vectors, matrices can only have one data type. If you try to specify a matrix with multiple data types the data will be coerced to the higher order data class.
+***It is important to note that similarly to vectors, matrices can only have one data type.*** If you try to specify a matrix with multiple data types the data will be coerced to the higher order data class.
 
 The `class`, `is`, and `as` functions can be used to check and coerce data structures in the same way they were used on the vectors in class 1. 
 
@@ -298,7 +274,7 @@ l2
 
 There is a lot of information about subsetting and modifying objects that we do not have time to cover in this course, so we encourage you to spend some time experimenting on your own. 
 
-### Class 2 exercises
+### Exercises
 
 These exercises are to help you solidify and expand on the information given above. We intentionally added some concepts that were not covered above, and hope that you will take a few minutes to think through what is happening and how R is interpreting the code. 
 
